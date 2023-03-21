@@ -10,9 +10,9 @@ const App = () => {
       <BrowserRouter>
         <Switch>
           <Route>
-            <div id='navbar'>
-              <div id='home-link'> Home</div>
-              <div id='aboutus-link'>About Us</div>
+            <div id='navbar' path="/">
+              <div id='home-link' path="home" element={<Home />}> Home</div>
+              <div id='aboutus-link'  path="about-us" element={<AboutUs />}>About Us</div>
             </div>
           </Route>
           <Route>
