@@ -15,10 +15,10 @@ const App = () => {
               <div id='aboutus-link'>About Us</div>
             </div>
           </Route>
-          <Route path="/home" element={<Home />}>
+          <Route path="/home" component={Home}}>
             <Home />
           </Route>
-          <Route path="/about-us" element={<AboutUs />}>
+          <Route path="/about-us" component={AboutUs}>
             <AboutUs />
           </Route>
         </Switch>
