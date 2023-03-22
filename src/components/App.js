@@ -8,22 +8,23 @@ const App = () => {
   return (
     <div id="main">
       <BrowserRouter>
-        <Switch>
-          <Route>
-            <div id='navbar' path="/">
-              <div id='home-link'> Home</div>
-              <div id='aboutus-link'>About Us</div>
+            <div id='navbar'>
+              <Link to="/home" id='home-link' > Home</Link>
+              <Link to="/about-us" id='aboutus-link' >About Us</Link>
             </div>
-          </Route>
-          <Route path="/home" component={Home}}>
+          <Switch>
+          <Route path="/home">
             <Home />
           </Route>
-          <Route path="/about-us" component={AboutUs}>
+          <Route path="/about-us">
             <AboutUs />
+          </Route>
+          <Route path='/'>
+            <Redirect to='/home' />
           </Route>
         </Switch>
       </BrowserRouter>
-    </div >
+    </div>
   )
 }
 
